@@ -1,0 +1,58 @@
+/*
+Theme Name: MornRain Poetry
+Theme URI: https://github.com/mornrain-lin/mornrain-poetry
+Author: mornrain-lin
+Author URI: https://github.com/mornrain-lin
+Description: A serene poetry-inspired theme for Chinese cultural writing: serif typography, vertical-feel headings and generous whitespace.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mornrain-poetry
+Tags: blog, one-column, custom-logo, custom-menu, featured-images, translation-ready, block-styles
+
+MornRain Poetry is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any later
+version.
+
+MornRain Poetry is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+All layout and component styles live in assets/css/main.css. This file carries
+the required theme header plus a few base rules that must be available before
+main.css is loaded.
+*/
+
+/* 1. Base ---------------------------------------------------------------- */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	word-wrap: break-word;
+}
+
+/* 2. Theme signature ----------------------------------------------------- */
+:root {
+	--mp-serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", Georgia, "Times New Roman", serif;
+}
+
+body {
+	font-family: var(--mp-serif);
+	letter-spacing: 0.02em;
+}
+
+.site-title a {
+	letter-spacing: 0.4em;
+}
+
+.entry-title {
+	letter-spacing: 0.12em;
+	font-weight: 600;
+}

@@ -1,0 +1,453 @@
+/*! MornRain Poetry - assets/css/main.css
+ *  Loaded after style.css. Zero external dependencies.
+ */
+
+/* 1. Design tokens */
+:root {
+	--mp-paper: #f7f3ea;
+	--mp-paper-deep: #efe8d9;
+	--mp-ink: #2a2622;
+	--mp-ink-soft: #6b6156;
+	--mp-vermilion: #a9483c;
+	--mp-rule: #ded4c3;
+	--mp-rule-strong: #c9bda6;
+	--mp-measure: 46rem;
+}
+
+/* 2. Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--mp-paper);
+	color: var(--mp-ink);
+	line-height: 2;
+	text-rendering: optimizeLegibility;
+}
+
+/* 3. Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 2.4em 0 0.8em;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: 0.14em;
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1.6em; }
+
+blockquote {
+	margin: 2em 0;
+	padding: 0.2em 0 0.2em 1.6em;
+	border-left: 2px solid var(--mp-vermilion);
+	color: var(--mp-ink-soft);
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: var(--mp-rule);
+}
+
+code,
+kbd,
+pre {
+	font-family: Menlo, Consolas, "Courier New", monospace;
+	font-size: 0.9em;
+	letter-spacing: 0;
+}
+
+pre {
+	padding: 1.2em 1.4em;
+	overflow-x: auto;
+	background-color: var(--mp-paper-deep);
+	border: 1px solid var(--mp-rule);
+}
+
+a {
+	color: var(--mp-vermilion);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(169, 72, 60, 0.32);
+	transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+	color: var(--mp-ink);
+	border-bottom-color: var(--mp-ink);
+}
+
+img,
+svg,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 4. Layout */
+.site {
+	max-width: var(--mp-measure);
+	margin: 0 auto;
+	padding: 4rem 1.5rem 3rem;
+}
+
+.site-header {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid var(--mp-rule);
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.site-title a {
+	border-bottom: 0;
+	color: var(--mp-ink);
+}
+
+.site-description {
+	margin: 0.4rem 0 0;
+	color: var(--mp-ink-soft);
+	font-size: 0.9rem;
+	letter-spacing: 0.2em;
+}
+
+/* 5. Navigation */
+.main-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	color: var(--mp-ink-soft);
+	font-size: 0.9rem;
+	letter-spacing: 0.24em;
+	border-bottom: 0;
+}
+
+.main-navigation a:hover,
+.main-navigation .current-menu-item > a {
+	color: var(--mp-vermilion);
+}
+
+.main-navigation ul ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	display: none;
+	min-width: 12rem;
+	padding: 1rem;
+	background-color: var(--mp-paper);
+	border: 1px solid var(--mp-rule);
+}
+
+.main-navigation li:hover > ul,
+.main-navigation li:focus-within > ul {
+	display: block;
+}
+
+.main-navigation ul ul li + li {
+	margin-top: 0.8rem;
+}
+
+.menu-toggle {
+	display: none;
+	padding: 0.5em 1.2em;
+	background: none;
+	border: 1px solid var(--mp-rule);
+	color: var(--mp-ink);
+	font-family: inherit;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+}
+
+/* 6. Entries */
+.site-main {
+	padding-top: 3rem;
+}
+
+.post-list > .post-card {
+	margin-bottom: 3.5rem;
+	padding-bottom: 3rem;
+	border-bottom: 1px solid var(--mp-rule);
+}
+
+.post-list > .post-card:last-child {
+	border-bottom: 0;
+}
+
+.entry-title {
+	margin: 0 0 0.6rem;
+}
+
+.entry-title a {
+	border-bottom: 0;
+	color: var(--mp-ink);
+}
+
+.entry-title a:hover {
+	color: var(--mp-vermilion);
+}
+
+.entry-meta {
+	margin-bottom: 1.2rem;
+	color: var(--mp-ink-soft);
+	font-size: 0.85rem;
+	letter-spacing: 0.18em;
+}
+
+.entry-meta > * + *::before {
+	content: " / ";
+	color: var(--mp-rule-strong);
+}
+
+.entry-content > p:first-of-type::first-letter {
+	float: left;
+	margin: 0.1em 0.12em 0 0;
+	font-size: 3em;
+	line-height: 0.9;
+	color: var(--mp-vermilion);
+}
+
+.entry-footer {
+	margin-top: 2rem;
+	color: var(--mp-ink-soft);
+	font-size: 0.85rem;
+	letter-spacing: 0.16em;
+}
+
+.read-more {
+	display: inline-block;
+	font-size: 0.85rem;
+	letter-spacing: 0.24em;
+	border-bottom: 1px solid var(--mp-rule);
+}
+
+/* 7. Pagination */
+.pagination,
+.navigation.posts-navigation {
+	margin: 3rem 0;
+	text-align: center;
+	font-size: 0.9rem;
+	letter-spacing: 0.2em;
+}
+
+.pagination .page-numbers {
+	padding: 0 0.6rem;
+}
+
+.pagination .current {
+	color: var(--mp-ink);
+	border-bottom: 1px solid var(--mp-ink);
+}
+
+/* 8. Footer */
+.site-footer {
+	margin-top: 4rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--mp-rule);
+	color: var(--mp-ink-soft);
+	font-size: 0.82rem;
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+.site-footer ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.2rem;
+	margin: 0 0 1rem;
+	padding: 0;
+	list-style: none;
+}
+
+.site-footer a {
+	color: var(--mp-ink-soft);
+	border-bottom: 0;
+}
+
+/* 9. Forms */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+textarea {
+	width: 100%;
+	padding: 0.7em 0.9em;
+	background-color: transparent;
+	border: 1px solid var(--mp-rule);
+	color: var(--mp-ink);
+	font-family: inherit;
+	font-size: 0.95rem;
+}
+
+button,
+input[type="submit"] {
+	padding: 0.7em 1.6em;
+	background-color: var(--mp-ink);
+	border: 0;
+	color: var(--mp-paper);
+	font-family: inherit;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+	background-color: var(--mp-vermilion);
+}
+
+/* 10. Comments */
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comment-list .children {
+	margin-left: 1.5rem;
+	list-style: none;
+}
+
+.comment-body {
+	padding: 1.2rem 0;
+	border-top: 1px solid var(--mp-rule);
+}
+
+/* 11. Accessibility */
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	border: 0;
+	white-space: nowrap;
+}
+
+.screen-reader-text:focus {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 999;
+	width: auto;
+	height: auto;
+	padding: 0.6em 1em;
+	clip: auto;
+	clip-path: none;
+	background-color: var(--mp-ink);
+	color: var(--mp-paper);
+	font-size: 0.85rem;
+}
+
+.skip-link:focus {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 999;
+	padding: 0.6em 1em;
+	background-color: var(--mp-ink);
+	color: var(--mp-paper);
+}
+
+/* 12. Responsive */
+@media (max-width: 640px) {
+	.site {
+		padding: 2.5rem 1.1rem 2rem;
+	}
+
+	.site-header {
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	.site-title {
+		writing-mode: horizontal-tb;
+		letter-spacing: 0.3em;
+	}
+
+	.main-navigation .menu-toggle {
+		display: inline-block;
+	}
+
+	.main-navigation .primary-menu {
+		display: none;
+		margin-top: 1rem;
+	}
+
+	.main-navigation.is-open .primary-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.main-navigation ul ul {
+		position: static;
+		display: block;
+		border: 0;
+		padding: 0.5rem 0 0 1rem;
+	}
+}
+
+/* 13. Print */
+@media print {
+	.site-header,
+	.site-footer,
+	.menu-toggle,
+	.pagination {
+		display: none;
+	}
+
+	body {
+		background: #ffffff;
+		color: #000000;
+	}
+
+	a {
+		border-bottom: 0;
+		color: #000000;
+	}
+}
