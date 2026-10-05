@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: cf93d2ba4252e3fc820ac383cb09c649_76c91697be7a11f18019525400248c00
-    ReservedCode1: pZAahN33IFyxL6LHBMFHwZm0l9bpiwcslA5o4rKLRn5jsL2qoqUOujZuAwdX3+P+2a/m8U4cvkWM6ojUNYZ+9uNthPO/3Or7tMNiamOfhA3kWKlvNYkXI2SDN/GnxinQGx12dDP6Q38IaauL8dA1iPChoXTPO0ydJzkqxJH94p+D7iIAz9b7IsuRECc=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: cf93d2ba4252e3fc820ac383cb09c649_76c91697be7a11f18019525400248c00
-    ReservedCode2: pZAahN33IFyxL6LHBMFHwZm0l9bpiwcslA5o4rKLRn5jsL2qoqUOujZuAwdX3+P+2a/m8U4cvkWM6ojUNYZ+9uNthPO/3Or7tMNiamOfhA3kWKlvNYkXI2SDN/GnxinQGx12dDP6Q38IaauL8dA1iPChoXTPO0ydJzkqxJH94p+D7iIAz9b7IsuRECc=
----
-
 # MornRain Poetry
 
 > A quiet typographic home for poetry, prose and Chinese cultural writing.
