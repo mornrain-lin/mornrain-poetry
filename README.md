@@ -1,4 +1,4 @@
-![mornrain-poetry](assets/home.png)
+![mornrain-poetry](assets/preview.png)
 
 # MornRain Poetry
 
@@ -17,12 +17,6 @@ assets, contacts **no remote service** and creates **no extra database tables**.
 | Function prefix | `mornrain_poetry` |
 
 ---
-
-## 界面预览
-
-| 首页 | 文章页 |
-| --- | --- |
-| ![首页](assets/home.png) | ![文章页](assets/article.png) |
 
 ## Table of contents
 
