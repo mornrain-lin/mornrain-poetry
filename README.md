@@ -1,3 +1,5 @@
+![mornrain-poetry](assets/preview.png)
+
 # MornRain Poetry
 
 > A quiet typographic home for poetry, prose and Chinese cultural writing.
